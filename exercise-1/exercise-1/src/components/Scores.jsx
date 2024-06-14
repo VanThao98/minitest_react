@@ -1,5 +1,7 @@
 // src/components/Scores.jsx
 import React from "react";
+import '../assets/app.css';
+
 function Scores({ courseName, results }) {
   return (
     <div className="scores">
@@ -18,7 +20,7 @@ function Scores({ courseName, results }) {
             <tr key={index}>
               <td>{result.firstName}</td>
               <td>{result.lastName}</td>
-              <td>{result.score}</td>
+              <td className={result.score > 50 ? "higher_five" : "lower_five"}>{result.score}</td>
             </tr>
           ))}
         </tbody>
